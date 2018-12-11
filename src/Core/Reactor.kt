@@ -1,5 +1,7 @@
 package Core
 
+import Core.Interfaces.ISolicitud
+
 class Reactor {
 
     constructor()
@@ -11,5 +13,9 @@ class Reactor {
             INSTANCE ?: synchronized(this){
                 INSTANCE ?: Reactor()
             }
+    }
+
+    fun ProcesarSolicitud(solicitud: ISolicitud){
+        Agente.getInstance().ProcesarComando(solicitud)
     }
 }

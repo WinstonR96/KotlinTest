@@ -1,12 +1,10 @@
 package Core
 
 import Core.Interfaces.IVista
+import Main.Model.ModelVista
 
 class Entorno {
-
-
-
-    lateinit var Vista : IVista
+    var Vista : IVista? = ModelVista.getInstance()
 
     constructor()
 
